@@ -1,5 +1,6 @@
 package com.example.sportconnect1.dao;
 
+import com.example.sportconnect1.models.Court;
 import com.example.sportconnect1.models.Reservation;
 import com.example.sportconnect1.models.User;
 import com.example.sportconnect1.util.HibernateUtil;
@@ -8,6 +9,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,6 +54,19 @@ public class ReservationDAO {
             Query<Reservation> query = session.createQuery("FROM Reservation WHERE user = :user AND bookingDate >= :date", Reservation.class);
             query.setParameter("user", user);
             query.setParameter("date", date);
+            return query.list();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
+
+    public List<Reservation> getReservationByCourtAndDateTime(Court court, LocalDate date, LocalTime startHour){
+        try (Session session = HibernateUtil.getSessionFactory().openSession()){
+            Query<Reservation> query = session.createQuery("FROM Reservation WHERE court = :court AND bookingDate = :date AND startTime = :startHour", Reservation.class);
+            query.setParameter("court", court);
+            query.setParameter("date", date);
+            query.setParameter("startTime", startHour);
             return query.list();
         } catch (Exception e) {
             e.printStackTrace();
