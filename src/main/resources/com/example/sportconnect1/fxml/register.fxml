@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.sportconnect1.controller.RegisterController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <stylesheets>
+        <URL value="@/com/example/sportconnect1/css/register.css"/>
+    </stylesheets>
+
+    <VBox alignment="CENTER" spacing="15"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <Label fx:id="title" text="SportConnect"/>
+
+        <Label text="Crear una cuenta nueva"/>
+
+        <Label text="Nombre"/>
+        <TextField fx:id="name" promptText="Nombre"/>
+
+        <Label text="Apellidos"/>
+        <TextField fx:id="surname" promptText="Apellido"/>
+
+        <Label text="Correo Electrónio"/>
+        <TextField fx:id="email" promptText="ejemplo@correo.com"/>
+
+        <Label text="Teléfono"/>
+        <TextField fx:id="phone" promptText="000 000 000"/>
+
+        <Label text="Password"/>
+        <PasswordField fx:id="password" promptText="••••••••"/>
+
+        <Button fx:id="btnRegistrar" onAction="#handleRegistrar" text="CREAR CUENTA"/>
+        <Button fx:id="btnVolver" onAction="#handleVolver" text="¿ya tienes cuenta? Inicia Sesión"/>
+
+    </VBox>
+
+</AnchorPane>

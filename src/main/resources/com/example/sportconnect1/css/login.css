@@ -1,0 +1,60 @@
+/* ===== FONDO ===== */
+.root {
+    -fx-background-color: #1a1a2e;
+}
+
+/* ===== TITULO ===== */
+#titulo {
+    -fx-text-fill: #e94560;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+}
+
+/* ===== LABELS ===== */
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+}
+
+/* ===== TEXTFIELDS ===== */
+.text-field, .password-field {
+    -fx-background-color: #16213e;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #888888;
+    -fx-border-color: #e94560;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+    -fx-pref-width: 300px;
+    -fx-font-size: 14px;
+}
+
+/* ===== BOTON LOGIN ===== */
+#btnLogin {
+    -fx-background-color: #e94560;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 300px;
+    -fx-padding: 12px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+#btnLogin:hover {
+    -fx-background-color: #c73652;
+}
+
+/* ===== BOTON REGISTER ===== */
+#btnRegister {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e94560;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+#btnRegister:hover {
+    -fx-text-fill: #ffffff;
+}

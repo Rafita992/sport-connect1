@@ -15,6 +15,7 @@ module org.example.sportconnect {
     opens com.example.sportconnect1.dao to org.hibernate.orm.core;
     opens com.example.sportconnect1.controller to javafx.fxml;
     opens com.example.sportconnect1.util to org.hibernate.orm.core;
+    opens com.example.sportconnect1.css;
 
     exports com.example.sportconnect1;
 }

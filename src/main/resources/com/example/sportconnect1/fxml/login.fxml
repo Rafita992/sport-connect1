@@ -6,25 +6,29 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import java.net.URL?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.sportconnect1.controller.LoginController"
             prefHeight="400.0" prefWidth="600.0">
+
+    <stylesheets>
+        <URL value="@/com/example/sportconnect1/css/login.css"/>
+    </stylesheets>
+
     <VBox alignment="CENTER" spacing="15"
           AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
           AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
 
-        <Label text="SportConnect"/>
+        <Label fx:id="titulo" text="SportConnect"/>
 
         <Label text="Correo Electrónico"/>
         <TextField fx:id="txtEmail" promptText="ejemplo@correo.com"/>
 
-        <Label text = "Contraseña"/>
+        <Label text="Contraseña"/>
         <PasswordField fx:id="txtPassword" promptText="••••••••"/>
 
-
         <Button fx:id="btnLogin" onAction="#handleLogin" text="ENTRAR"/>
-
 
         <Button fx:id="btnRegister" onAction="#handleRegister" text="¿No tienes cuenta? Regístrate"/>
 
