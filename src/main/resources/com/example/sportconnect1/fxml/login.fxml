@@ -32,6 +32,8 @@
 
         <Button fx:id="btnRegister" onAction="#handleRegister" text="¿No tienes cuenta? Regístrate"/>
 
+        <Label fx:id="message" text=""/>
+
     </VBox>
 
 </AnchorPane>

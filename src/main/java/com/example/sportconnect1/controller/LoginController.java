@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -19,6 +20,8 @@ public class LoginController {
     private Button btnLogin;
     @FXML
     private Button btnRegister;
+    @FXML
+    private Label message;
 
     private final UserService userService = new UserService();
 
@@ -28,7 +31,7 @@ public class LoginController {
         String password = txtPassword.getText().trim();
 
         if(email.isEmpty() || password.isEmpty()){
-            System.out.println("Por favor rellena todos los campos");
+            message.setText("Por favor rellena todos los campos");
         }
         try {
             User user = userService.login(email, password);
@@ -40,7 +43,7 @@ public class LoginController {
                     navigateToHomeUser(user);
                 }
             } else{
-                System.out.println("El correo o contraseña han sido incorrectos");
+                message.setText("El correo o contraseña han sido incorrectos");
             }
         } catch (Exception e) {
             System.out.println("Error, no se pudo conectar con el servidor");
